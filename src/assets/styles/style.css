@@ -1,0 +1,8 @@
+@import './base.css';
+
+/*Страницы*/
+
+@import './login.css';
+@import './register.css';
+@import './reset.css';
+
