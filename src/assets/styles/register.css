@@ -1,0 +1,114 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+.registration {
+  padding: 100px 0px 100px 0px;
+  background-image: url("../images/bg_auth.jpg");
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.registration__title {
+  color: #ededed;
+  font-size: 48px;
+}
+
+.registration__desc {
+  font-size: 24px;
+  color: #ededed;
+  margin-top: 10px;
+}
+
+.reg-form {
+  width: 432px;
+  min-height: 633px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(20, 20, 35, 0.6);
+  backdrop-filter: blur(25px);
+  border-radius: 36px;
+  padding: 36px;
+}
+
+.form__title {
+  font-size: 32px;
+  color: #ededed;
+  margin-bottom: 24px;
+}
+
+form input {
+  margin-bottom: 25px;
+  padding-left: 35px;
+  border: none;
+  height: 52px;
+  background: #1c1147;
+  color: #ededed;
+  border-radius: 135px;
+}
+
+.btn__reg {
+  height: 57px;
+  background: #6247d1;
+  border-radius: 135px;
+  color: #ededed;
+  font-size: 24px;
+  padding: 0px;
+}
+
+.policy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.policy__text {
+  color: #ededed;
+  text-align: left;
+  font-size: 16px;
+  width: 258px;
+  margin-left: 12px;
+}
+
+.log {
+  color: #ededed;
+}
+
+.GoLogin a {
+  color: #ededed;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 8px;
+}
+
+.show-icon {
+  position: absolute;
+  top: 268px;
+  left: 350px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.hide-icon {
+  position: absolute;
+  left: 350px;
+  top: 268px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.show-icon_rep {
+  position: absolute;
+  top: 345px;
+  left: 350px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.hide-icon_rep {
+  position: absolute;
+  left: 350px;
+  top: 345px;
+  z-index: 11;
+  cursor: pointer;
+}
