@@ -5,4 +5,10 @@
 @import './login.css';
 @import './register.css';
 @import './reset.css';
+@import './user.css';
+
+
+/*Компоненты*/
+
+@import './player.css';
 
