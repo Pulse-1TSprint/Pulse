@@ -16,6 +16,9 @@ const routes = [
     path: '/user',
     name: 'User',
     component: () => import('../views/UserPage.vue'),
+   // meta: {
+     // requiresAuth: true
+    //}
   },
   {
     path: '/chart',
@@ -26,14 +29,13 @@ const routes = [
     path: '/404',
     name: '404',
     component: () => import('../views/404Page.vue'),
+
   },
   {
     path: '/home',
     name: 'Home',
     component: () => import('../views/HomePage.vue'),
-    // meta: {
-    //   requiresAuth: true
-    // }
+
   },
   {
     path: '/register',
@@ -54,7 +56,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if(to.path === '/login' && auth.currentUser) {
-    next('/404')
+    next('/user')
     return;
   }
 

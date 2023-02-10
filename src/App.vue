@@ -3,12 +3,12 @@
     <button class="Logout" @click="$store.dispatch('logout')">Выйти</button>
   </div>
   <router-view/>
-  <HeaderVue/>
 </template>
 
 <script>
+
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 
@@ -41,9 +41,10 @@ export default {
 }
 
 .Logout {
-  background: #FF5858;
+  background: #1C1147;
   color: #fff;
-  width: 100px;
+  width: 140px;
   height: 35px;
+  border-radius: 31px;
 }
 </style>
