@@ -1,17 +1,18 @@
 <template>
   <div class="container">
     <div class="logo">
-      <a href="#" class="logo-pulse">Pulse</a>
+      <a href="/home" class="logo-pulse">Pulse</a>
     </div>
     <div class="wrapp">
       <div class="search-box">
-        <input type="text" class="search" placeholder="Поиск" />
+         <img src="../assets/images/icons/searchIcon.svg" alt="search" class="search-icon"> 
+        <input type="text" class="search" placeholder="Поиск"/>
       </div>
       <div class="chart">
-        <a href="#" class="chart-link">Чарт</a>
+        <a href="/chart" class="chart-link">Чарт</a>
       </div>
       <div class="load">
-        <a href="#" class="load-link">Загрузить</a>
+        <a href="/load" class="load-link">Загрузить</a>
       </div>
     </div>
     <div class="profile">
@@ -19,7 +20,7 @@
         <p class="user-name">Сычев Юрий</p>
         <p class="user-id">id 845789478</p>
       </div>
-      <div class="user-photo"></div>
+      <a href="/user"><img src="../assets/images/UserPhoto.png" alt="user-photo" class="user-photo"> </a> 
     </div>
   </div>
 </template>
@@ -48,6 +49,10 @@
 }
 .wrapp {
   display: flex;
+  align-items: center;
+}
+.search-icon{
+margin-left: 500px;
 }
 .search {
   background-color: #110f10;
@@ -61,7 +66,15 @@
   font-size: 24px;
   line-height: 29px;
   color: #ededed;
-  margin-left: 500px;
+  margin-left: 6px;
+}
+.search::placeholder{
+font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ededed;
 }
 .chart-link {
   text-decoration: none;
