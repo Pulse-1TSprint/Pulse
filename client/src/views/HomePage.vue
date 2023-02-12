@@ -3,42 +3,67 @@
     <HeaderPage />
     <div class="container-page">
       <div class="track-cover">
-        <div class="track-photo"></div>
+        <img
+          src="../assets/images/MusicPhoto.png"
+          alt="user-photo"
+          class="track-photo"
+        />
         <p class="track-name">Товарищ Сталин</p>
         <p class="track-autor">ANAZED</p>
       </div>
       <div class="tracks">
         <h1 class="tracks-title">Следующие треки</h1>
         <div class="track-item">
-          <div class="track-item-photo"></div>
+          <img
+            src="../assets/images/MusicPhoto2.png"
+            alt="user-photo"
+            class="track-item-photo"
+          />
           <div class="track-item-block">
             <div class="track-item-title">Капканы</div>
             <div class="track-item-autor">Эндшпиль, HLOY</div>
           </div>
         </div>
         <div class="track-item">
-          <div class="track-item-photo"></div>
+          <img
+            src="../assets/images/MusicPhoto2.png"
+            alt="user-photo"
+            class="track-item-photo"
+          />
           <div class="track-item-block">
             <div class="track-item-title">Капканы</div>
             <div class="track-item-autor">Эндшпиль, HLOY</div>
           </div>
         </div>
         <div class="track-item">
-          <div class="track-item-photo"></div>
+          <img
+            src="../assets/images/MusicPhoto2.png"
+            alt="user-photo"
+            class="track-item-photo"
+          />
           <div class="track-item-block">
             <div class="track-item-title">Капканы</div>
             <div class="track-item-autor">Эндшпиль, HLOY</div>
           </div>
         </div>
         <div class="track-item">
-          <div class="track-item-photo"></div>
+          <img
+            src="../assets/images/MusicPhoto2.png"
+            alt="user-photo"
+            class="track-item-photo"
+          />
           <div class="track-item-block">
             <div class="track-item-title">Капканы</div>
             <div class="track-item-autor">Эндшпиль, HLOY</div>
           </div>
         </div>
         <div class="track-item">
-          <div class="track-item-photo"></div>
+          <img
+            src="../assets/images/MusicPhoto2.png"
+            alt="user-photo"
+            class="track-item-photo"
+          />
+
           <div class="track-item-block">
             <div class="track-item-title">Капканы</div>
             <div class="track-item-autor">Эндшпиль, HLOY</div>
@@ -47,7 +72,7 @@
       </div>
     </div>
   </body>
-        <MusicPlayer />
+  <MusicPlayer />
 </template>
 
 <style>
@@ -104,8 +129,8 @@ body {
   height: 50px;
   background-color: #755384;
   margin-right: 17px;
-  filter: drop-shadow(0px 1px 0px #6247D1);
-border-radius: 10px;
+  filter: drop-shadow(0px 1px 0px #6247d1);
+  border-radius: 10px;
 }
 .track-item-block {
   display: flex;
@@ -131,10 +156,9 @@ border-radius: 10px;
 </style>
 <script>
 import HeaderPage from "../components/HeaderPage.vue";
-import MusicPlayer from "../components/MusicPlayer.vue"
+import MusicPlayer from "../components/MusicPlayer.vue";
 export default {
   components: { HeaderPage, MusicPlayer },
-  
 };
 </script>
 
