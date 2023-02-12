@@ -10,7 +10,6 @@
       </div>
 
       <div class="chart-track-list">
-        .
       </div>
 
     </div>
@@ -120,26 +119,7 @@ scrollbar-width: none;
 </style>
 
 <script>
-import { ref, onBeforeMount } from "vue";
-import { useStore } from "vuex";
-import { auth } from "../firebase";
-import MusicPlayer from "../components/MusicPlayer.vue";
 export default {
-  components: { MusicPlayer },
-  setup() {
-    const name = ref("");
-    const store = useStore();
-    onBeforeMount(() => {
-      const user = auth.currentUser;
-      if(user) {
-        name.value = user.email.split('@')[0];
-      }
-      store.dispatch("fetchUser");
-    });
 
-    return {
-      name
-    }
-  },
-};
+}
 </script>
