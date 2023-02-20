@@ -85,10 +85,26 @@
 
 .track__item {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  margin-bottom: 30px;
+  align-items: baseline;
+
 }
+
+.track__item .song {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.track__item .song img {
+  display: block;
+  margin-right: 17px;
+}
+
 
 .track__title {
   font-size: 20px;
