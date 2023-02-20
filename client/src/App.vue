@@ -1,13 +1,13 @@
 <template>
-  <div id="nav" v-if="$store.state.user">
-    <button class="Logout" @click="$store.dispatch('logout')">Выйти</button>
-  </div>
   <router-view/>
+
 </template>
 
 <script>
+import MusicPlayer from './components/MusicPlayer.vue'
 
 export default {
+  components: {},
   name: 'App',
 }
 </script>
@@ -27,8 +27,7 @@ export default {
 }
 
 #nav {
-  padding: 30px;
-  background: black;
+  padding: 20px;
 }
 
 #nav a {

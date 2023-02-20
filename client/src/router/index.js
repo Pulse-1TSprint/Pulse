@@ -16,9 +16,9 @@ const routes = [
     path: '/user',
     name: 'User',
     component: () => import('../views/UserPage.vue'),
-   // meta: {
-     // requiresAuth: true
-    //}
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/chart',
@@ -32,7 +32,7 @@ const routes = [
 
   },
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: () => import('../views/HomePage.vue'),
 

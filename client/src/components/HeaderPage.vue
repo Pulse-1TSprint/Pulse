@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="logo">
-      <a href="/home" class="logo-pulse">Pulse</a>
+      <a href="/" class="logo-pulse">Pulse</a>
     </div>
     <div class="wrapp">
       <div class="search-box">
-         <img src="../assets/images/icons/searchIcon.svg" alt="search" class="search-icon"> 
-        <input type="text" class="search" placeholder="Поиск"/>
+         <img src="../assets/images/icons/searchIcon.svg" alt="search" class="search-icon">
+        <input type="text" class="search__header" placeholder="Поиск"/>
       </div>
       <div class="chart">
         <a href="/chart" class="chart-link">Чарт</a>
@@ -20,13 +20,14 @@
         <p class="user-name">Сычев Юрий</p>
         <p class="user-id">id 845789478</p>
       </div>
-      <a href="/user"><img src="../assets/images/UserPhoto.png" alt="user-photo" class="user-photo"> </a> 
+      <a href="/user"><img src="../assets/images/UserPhoto.png" alt="user-photo" class="user-photo"> </a>
     </div>
   </div>
 </template>
 
 <style>
 .container {
+  background-color: #110F10;
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
@@ -54,7 +55,7 @@
 .search-icon{
 margin-left: 500px;
 }
-.search {
+.search__header {
   background-color: #110f10;
   border: 0px;
   outline: none;
