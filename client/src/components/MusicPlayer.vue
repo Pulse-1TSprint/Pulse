@@ -1,5 +1,5 @@
 <template>
-  <section class="player">
+    <section class="player">
     <div class="song__text">
       <h2 class="song-title">
         {{ current.title }}
@@ -203,26 +203,6 @@
         </svg>
       </button>
     </div>
-    <!--<button class="icon46">
-      <svg
-        width="20"
-        height="16"
-        viewBox="0 0 20 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="4"
-          y="0.888016"
-          width="16"
-          height="3"
-          rx="1.5"
-          fill="#6247D1"
-        />
-        <rect x="4" y="6.88802" width="16" height="3" rx="1.5" fill="#6247D1" />
-        <rect y="12.888" width="20" height="3" rx="1.5" fill="#6247D1" />
-      </svg>
-    </button>-->
     <button @click="toggleVisibility" class="settings">
       <svg
         width="24"
@@ -263,6 +243,7 @@
       class="img__track_next"
     />
   </section>
+
   <div v-if="isVisible" class="tegs">
     <div class="tegs__wrapper">
       <div class="tegs__item">Любимое</div>
@@ -273,39 +254,17 @@
 </template>
 
 <script>
+import { shuffleArray } from "../helpers/utils";
+import songs from "../data/data.tracks";
 export default {
+  components: {},
   data() {
     return {
       current: {},
       index: 0,
       isPlaying: false,
       isVisible: false,
-      songs: [
-        {
-          img: "insine",
-          title: "Insine",
-          artists: "Ofenbach",
-          src: require("../assets/ofenbach-insane.mp3"),
-        },
-        {
-          img: "numb",
-          title: "Numb",
-          artists: "Neffex",
-          src: require("../assets/NEFFEX-Numb.mp3"),
-        },
-        {
-          img: "monster",
-          title: "The Monster",
-          artists: "Eminem feat Rihanna",
-          src: require("../assets/Eminem_Rihanna-The_Monster.mp3"),
-        },
-        {
-          img: "solo",
-          title: "Solo Ofenbach Remix",
-          artists: "Clean Bandit feat Demi Lovato",
-          src: require("../assets/Solo.mp3"),
-        },
-      ],
+      songs: shuffleArray(songs),
       player: new Audio(),
     };
   },

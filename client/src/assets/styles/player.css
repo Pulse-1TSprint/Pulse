@@ -1,3 +1,8 @@
+.wrapper__player {
+  display: flex;
+  flex-direction: column;
+}
+
 .player {
   background-color: #0f0617;
   display: flex;
@@ -64,10 +69,12 @@ button:hover {
 }
 
 .tegs__wrapper {
+  background-color: #0f0617;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 19px;
+  color: #EDEDED;
 }
 
 .tegs__item {
@@ -98,4 +105,38 @@ button:hover {
   background: #1c1147;
   border-radius: 64px;
   padding: 6px;
+}
+
+.progress {
+  width: 100%;
+  margin-top: -15px;
+  user-select: none;
+}
+
+.progress__duration {
+  color: #1c1147;
+  font-weight: 700;
+  font-size: 20px;
+  opacity: 0.5;
+}
+.progress__time {
+  margin-top: 2px;
+  color: #71829e;
+  font-weight: 700;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.progress__bar {
+  height: 6px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #1c1147;
+  display: inline-block;
+  border-radius: 10px;
+}
+.progress__current {
+  height: inherit;
+  width: 0%;
+  background-color: #A38EFB;
+  border-radius: 10px;
 }

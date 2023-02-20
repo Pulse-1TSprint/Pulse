@@ -6,9 +6,11 @@
 @import './register.css';
 @import './reset.css';
 @import './user.css';
+@import './homepage.css';
 
 
 /*Компоненты*/
 
 @import './player.css';
+
 
