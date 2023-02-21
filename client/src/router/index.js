@@ -7,6 +7,12 @@ const routes = [
     name: 'Reset',
     component: () => import('../views/ResetPasswordPage.vue'),
   },
+  //Temp, delete after some tests
+  {
+    path: '/test',
+    name: 'Test',
+    component: () => import('../views/TestPage.vue')
+  },
   {
     path: '/load',
     name: 'Load',
