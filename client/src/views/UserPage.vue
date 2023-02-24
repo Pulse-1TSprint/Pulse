@@ -113,23 +113,23 @@
           </svg>
         </div>
         <div class="tracks__wrapper">
-          <div class="track__item">
-            <button
-              v-for="song in songs"
-              :key="song.src"
-              @click="play(song)"
-              :class="song.src == current.src ? 'song playing' : 'song'"
-            >
-              <img
-                :src="require(`../assets/images/${song.img}.png`)"
-                class="img__track_next"
-              />
-              {{ song.title }}
-              <br>
-              {{ song.artists }}
-            </button>
-          </div>
-        </div>
+    <div class="track__item">
+      <button
+        v-for="song in songs"
+        :key="song.src"
+        @click="play(song)"
+        :class="song.src == current.src ? 'song playing' : 'song'"
+      >
+        <img
+          :src="require(`../assets/images/${song.img}.png`)"
+          class="img__track_next"
+        />
+        {{ song.title }}
+        <br />
+        {{ song.artists }}
+      </button>
+    </div>
+  </div>
       </div>
       <div class="about">
         <div class="about__user">

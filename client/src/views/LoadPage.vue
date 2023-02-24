@@ -11,14 +11,17 @@
         <!-- <button class="submit_button" @click="onUploadFile" :disabled="!this.selectedFile">Загрузить</button> -->
       </div>
       
+
         <div class="track_info">
           <h3 class="track_info_title">Загрузить трек</h3>
 
           <div class="file-upload">
             <!-- <button @click="onUploadFile" class="upload-button"
           :disabled="!this.selectedFile">Upload file</button> -->
+
           <label for="form_file">Добавьте файл</label>
             <input id="form_file" type="file" @change="onFileChange" required/>
+            <input type="file" @change="onFileChange" />
             
           </div>
 
@@ -44,7 +47,6 @@
 
 
         </div>
-
         <div class="tags_lyrics">
           <div class="tags" >
             <label for="form_tags">Ввести свой тег</label>

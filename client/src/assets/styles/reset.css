@@ -24,7 +24,7 @@
 
 .forgot input {
   margin-bottom: 25px;
-  padding-left: 35px;
+
   border: none;
   height: 52px;
   background: #1c1147;
@@ -39,7 +39,7 @@
   border-radius: 135px;
   color: #ededed;
   font-size: 24px;
-  padding: 0px;
+  padding-left: 0px;
 }
 
 .GoLog a {

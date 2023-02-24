@@ -1,0 +1,188 @@
+@media (max-width: 1024px) {
+  .registration {
+    padding: 100px 55px 100px 35px;
+  }
+
+  .logIn {
+    padding: 100px 55px 100px 35px;
+  }
+
+  .registration__title {
+     font-size: 36px;
+  }
+
+  .logIn__title {
+    font-size: 36px;
+  }
+
+  .registration__desc {
+    font-size: 20px;
+  }
+
+  .logIn__desc {
+    font-size: 20px;
+  }
+
+  .reg-form {
+    width: 365px;
+    min-height: 565px;
+  }
+
+  .login {
+    width: 365px;
+    height: 400px;
+  }
+
+
+  .show-icon {
+    position: absolute;
+    top: 232px;
+    left: 275px;
+  }
+
+  .hide-icon {
+    position: absolute;
+    top: 232px;
+    left: 275px;
+  }
+
+  .show-icon_rep {
+    position: absolute;
+    top: 295px;
+    left: 277px;
+  }
+
+  .hide-icon_rep {
+    position: absolute;
+    left: 277px;
+    top: 295px;
+  }
+
+  .show-icon_log {
+    position: absolute;
+    top: 163px;
+    left: 248px;
+    z-index: 11;
+    cursor: pointer;
+  }
+
+  .hide-icon_log {
+    position: absolute;
+    left: 248px;
+    top: 163px;
+    z-index: 11;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0px 100px 0px;
+  }
+
+  .logIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0px 100px 0px;
+  }
+
+  .registration__text {
+    margin-bottom: 35px;
+  }
+
+  .logIn__text {
+    margin-bottom: 35px;
+  }
+
+  .forgot {
+    width: 365px;
+    height: 265px;
+  }
+
+  .reset__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .registration__title {
+    font-size: 24px;
+ }
+
+ .logIn__title {
+  font-size: 24px;
+ }
+
+ .registration__desc {
+   font-size: 16px;
+ }
+
+ .logIn__desc {
+  font-size: 16px;
+ }
+
+ .reset__title {
+  font-size: 24px;
+}
+
+.btn__reset {
+  font-size: 16px;
+  padding-left: 0px;
+}
+}
+
+
+@media (max-width: 376px) {
+  .reg-form {
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+  }
+
+  .policy__text {
+    font-size: 12px;
+  }
+
+  .rem_and_forget {
+    font-size: 12px;
+  }
+
+  .btn__reg {
+    font-size: 18px;
+  }
+
+  .show-icon {
+    position: absolute;
+    top: 232px;
+    left: 250px;
+  }
+
+  .hide-icon {
+    position: absolute;
+    top: 232px;
+    left: 250px;
+  }
+
+  .show-icon_rep {
+    position: absolute;
+    top: 295px;
+    left: 250px;
+  }
+
+  .hide-icon_rep {
+    position: absolute;
+    left: 250px;
+    top: 295px;
+  }
+
+  .forgot {
+    width: 100%;
+  }
+}

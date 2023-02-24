@@ -3,6 +3,8 @@
   padding: 100px 0px 100px 0px;
   min-height: 100vh;
   background-image: url("../images/bg_auth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,7 +19,7 @@
   margin-top: 10px;
 }
 
-form {
+.login {
   width: 432px;
   height: 455px;
   display: flex;
@@ -88,14 +90,14 @@ form input:hover {
 .show-icon_log {
   position: absolute;
   top: 191px;
-  left: 350px;
+  left: 335px;
   z-index: 11;
   cursor: pointer;
 }
 
 .hide-icon_log {
   position: absolute;
-  left: 350px;
+  left: 335px;
   top: 191px;
   z-index: 11;
   cursor: pointer;
