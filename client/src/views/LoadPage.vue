@@ -161,6 +161,7 @@ export default {
   data() {
     return {
       selectedFile: "",
+<<<<<<< HEAD
       artist: "",
       track_name: "",
       year: "",
@@ -254,3 +255,29 @@ components: { HeaderPage }
 
 
 
+=======
+    };
+  },
+  methods: {
+    onFileChange(e) {
+      const selectedFile = e.target.files[0]; // accessing file
+      this.selectedFile = selectedFile;
+    },
+    onUploadFile() {
+      const formData = new FormData();
+      formData.append("file", this.selectedFile);  // appending file
+
+     // sending file to the backend
+      axios
+        .post("http://localhost:3500/upload", formData)
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
+};
+</script>
+>>>>>>> 2fc71d2 (create server folder)
