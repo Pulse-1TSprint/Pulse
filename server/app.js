@@ -86,6 +86,7 @@ app.post('/api/upload', async (req, res) => {
         //Check if multiple files or single file
         if (!files.file.length) {
             //Single file
+            console.log(files.fields);
 
             const file = files.file
             const artist = fields.artist

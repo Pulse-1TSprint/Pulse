@@ -5,20 +5,20 @@
     <div class="container-pg">
       <div class="info">
         <img class="photo" src="../assets/images/photo.png" alt="photo" />
-        <h2></h2>
-        <h3></h3>
+        <h2>Название трека</h2>
+        <h3>Альбом</h3>
         <button class="submit_button" @click="uploadButtonPressed">Загрузить</button>
         <!-- <button class="submit_button" @click="onUploadFile" :disabled="!this.selectedFile">Загрузить</button> -->
       </div>
       
-      <div class="load">
         <div class="track_info">
           <h3 class="track_info_title">Загрузить трек</h3>
 
           <div class="file-upload">
             <!-- <button @click="onUploadFile" class="upload-button"
           :disabled="!this.selectedFile">Upload file</button> -->
-            <input type="file" @change="onFileChange" />
+          <label for="form_file">Добавьте файл</label>
+            <input id="form_file" type="file" @change="onFileChange" required/>
             
           </div>
 
@@ -44,12 +44,16 @@
 
 
         </div>
-        <div class="tags_lyrics">
-          <div class="tags">
 
+        <div class="tags_lyrics">
+          <div class="tags" >
+            <label for="form_tags">Ввести свой тег</label>
+            <input id="form_tags" v-model="tags" type="text" class="input" required>
           </div>
-          <div class="lyrics"></div>
-        </div>
+          <div class="lyrics">
+            <label for="form_tags">Текст песни</label>
+            <input id="form_lyrics" v-model="lyrics" type="text" class="input" required>
+          </div>
       </div>
     </div>
   </form>
@@ -68,9 +72,9 @@
 
 .container-pg {
   display: flex;
-  margin-top: 40px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-top: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 input {
@@ -84,6 +88,8 @@ input {
 }
 
 .track_info {
+  margin-left: 40px;
+  margin-right: 40px;
   padding: 36px 36px 0px 36px;
   width: 421px;
   min-height: 600px;
@@ -93,10 +99,40 @@ input {
   border-radius: 36px 36px 0px 0px;
 }
 
+.tags-lyrics {
+  margin-left: 100px;
+}
+
+.tags {
+  padding-top: 50px;
+  width: 384px;
+  height: 200px;
+  background: rgba(28, 17, 71, 0.6);
+  box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  border-radius: 36px;
+  margin-bottom: 50px;
+}
+
+.lyrics {
+  padding-top: 50px;
+  width: 384px;
+  height: 359px;
+  background: rgba(28, 17, 71, 0.6);
+  box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  border-radius: 36px;
+}
+
 .track_info_title {
   font-size: 32px;
   text-align: left;
   font-weight: 400;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 24px;
 }
 
 .input {
@@ -110,9 +146,9 @@ input {
 .submit_button {
   color: #fff;
   background-color: #6247D1;
-  border-radius: 25%;
-  width: 200px;
-  height: 100px;
+  border-radius: 50px;
+  width: 400px;
+  height: 72px;
 }
 </style>
 
