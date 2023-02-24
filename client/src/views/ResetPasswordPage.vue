@@ -5,7 +5,7 @@
       <input type="email" placeholder="Email" v-model="reset_form.email" />
       <input class="btn__reset" type="submit" value="Сбросить пароль" />
       <div class="GoLog">
-        <router-link to="/login">Назад</router-link>
+        <router-link to="/register">Назад</router-link>
       </div>
     </form>
   </section>
