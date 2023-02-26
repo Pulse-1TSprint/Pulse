@@ -1,4 +1,4 @@
-import { formatTimer } from "./timer";
+
 
 /**
  * Remove a target object from array
@@ -6,27 +6,11 @@ import { formatTimer } from "./timer";
  * @param {object} target
  */
 
-const deleteElement = (array, target) => {
-  return array.filter(item => {
-    return item != target;
-  });
-};
-
 /**
  * Insert initial songs params
  * @param {array} songs
  */
 
-const threatSongs = songs => {
-  return songs.map(song => {
-    song["isPlaying"] = false;
-    song["percent"] = 0;
-    song["currentlyTimer"] = "00:00";
-    song["totalTimer"] = formatTimer(song.seconds);
-
-    return song;
-  });
-};
 
 /**
  * Shuffle songs.
@@ -42,4 +26,4 @@ function shuffleArray(array) {
   return array;
 }
 
-export { deleteElement, threatSongs, shuffleArray };
+export { shuffleArray };
