@@ -1,3 +1,31 @@
+
+@media screen and (max-width: 1080px){
+  .chart-and-authors{
+  gap: 25px;}
+
+  .authors-line{
+  display: block;}
+
+  .authors-icon-text{
+  margin-top: 20px;}
+
+  .authers-box{
+  width: max-content;}
+
+  .authors-icon{
+    height: 150px;
+    width: 150px;}
+
+  .authers-list{
+    width: 100%;
+    gap: 0px;}
+
+  .chart-box{
+  width: max-content;
+  padding: 30px;}
+}
+
+
 @media (max-width: 1024px) {
   .registration {
     padding: 100px 55px 100px 35px;
@@ -134,6 +162,85 @@
   font-size: 16px;
   padding-left: 0px;
 }
+}
+
+
+@media screen and (max-width: 480px){
+
+  .chart-and-authors{
+  display: block;
+  justify-content: center;
+  width: 100%;}
+
+  .chart-box{
+  width: 100%;
+  justify-content: center;
+  padding: 10px;}
+
+  .chart-period-line{
+  display: block;
+  margin-top: 20px;}
+
+  .chart-track-list{
+  margin-top: 135px;}
+
+  .chart-period-box-text{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;}
+
+  .chart-period-box{
+  width: 115px;
+  margin-top: 10%;}
+
+  .chart-period-text{
+  font-size: 18px;
+  line-height: 26px;}
+
+  .authers-box{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;}
+
+
+  .authors-line{
+  display: flex;
+  align-items: flex-start;}
+
+  .authors-icon{
+  height: 160px;
+  width: 160px;}
+
+
+  .authers-list{
+  gap: 10px;
+  align-items: center;}
+
+  .authors-period-line{
+  display: block;}
+
+  .track-item {
+  gap: 0px;}
+
+  .track-item-photo {
+  width: 50px;
+  height: 50px;}
+
+  .track-item-block {
+  display: flex;
+  flex-direction: column;}
+
+  .track-item-title {
+  font-size: 18px;}
+
+  .chart-category-box{
+  padding: 0px 12px 4px;}
+
+  .chart-category-text{
+  font-size: 18px;
+  line-height: 20px;}
+
 }
 
 

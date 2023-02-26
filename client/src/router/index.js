@@ -22,9 +22,9 @@ const routes = [
     path: '/user',
     name: 'User',
     component: () => import('../views/UserPage.vue'),
-    meta: {
-      requiresAuth: true
-    }
+    //meta: {
+      //requiresAuth: true
+    //}
   },
   {
     path: '/chart',
