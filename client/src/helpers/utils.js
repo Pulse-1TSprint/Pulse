@@ -9,6 +9,8 @@
 /**
  * Insert initial songs params
  * @param {array} songs
+ * @param {array} Chartsongs
+ * @param {array} artists
  */
 
 

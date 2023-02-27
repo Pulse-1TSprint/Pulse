@@ -1,171 +1,187 @@
-body{
-  background-color: #110F10;
+body {
+  background-color: #110f10;
 }
 
-  .chart-and-authors{
+.chart-and-authors {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
   gap: 50px;
   width: max-content;
-  margin: 0 auto;}
+  margin: 0 auto;
+  padding-top: 80px;
+}
 
-  .chart-box{
-  display: flex;
-  align-items: flex-start;
+.chart-box {
   padding: 36px;
-  gap: 36px;
   width: 100%;
   background: rgba(28, 17, 71, 0.6);
-  border-radius: 36px;}
+  border-radius: 36px;
+}
 
-  .chart-authors-h2{
+.chart-authors-h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 44px;
   line-height: 44px;
-  color: #EDEDED;}
+  color: #ededed;
+}
 
-  .chart-period-line{
+.chart-period-line {
   display: flex;
   gap: 36px;
-  position: absolute;
+  align-items: center;
   width: auto;
-  height: 40px;}
+  height: 40px;
+}
 
-  .chart-period-box-text{
+.chart-period-box-text {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 36px;}
+  gap: 36px;
+}
 
-
-  .chart-period-box{
+.chart-period-box {
   display: flex;
   justify-content: center;
   padding: 5px 36px 5px;
   width: 140px;
   height: 35px;
-  background: #1C1147;
+  background: #1c1147;
   border-radius: 64px;
-  margin-top: 10px;}
+  margin-top: 10px;
+}
 
-  .chart-period-text{
+.chart-period-text {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  color: #EDEDED;
-  flex: none;}
+  color: #ededed;
+  flex: none;
+}
 
-  .chart-track-list{
+.chart-track-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
   gap: 24px;
-  margin-top: 70px;}
+  margin-top: 70px;
+  min-height: 900px;
+}
 
-
-  .authors-line{
+.authors-line {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0px;
   gap: 36px;
-  height: 100%;}
+  height: 100%;
+  width: 450px;
+  justify-content: space-evenly
+}
 
-  .authors-icon-text{
+.authors-icon-text {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #EDEDED;
+  color: #ededed;
   align-items: center;
-  }
+}
 
-  .authors-icon{
+.authors-icon {
   width: 170px;
   height: 170px;
-  filter: drop-shadow(2px 3px 3px #6247D1);
+  filter: drop-shadow(2px 3px 3px #6247d1);
   border-radius: 20px;
-  }
+}
 
-  .authors-text{
+.authors-text {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 10px;
   font-size: 18px;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
-
-  .authors-h2-line{
+.authors-h2-line {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 36px;}
+  gap: 36px;
+}
 
-  .authers-box{
-  display: flex;
-  align-items: flex-start;
+.authers-box {
   padding: 36px;
   gap: 36px;
   background: rgba(28, 17, 71, 0.6);
   border-radius: 36px;
-  width: 100%;}
+  width: 100%;
+}
 
-  .authors-period-line{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 36px;
-  position: absolute;}
+.authors-h2 {
+  font-size: 32px;
+  color: #ededed;
+  text-align: left;
+}
 
-  .authers-list{
+.chart-h2 {
+  font-size: 32px;
+  color: #ededed;
+  text-align: left;
+}
+
+.authers-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  margin-top: 70px;}
+  margin-top: 70px;
+}
 
-
-  .track-item {
+.track-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
   gap: 17px;
   width: auto;
-  height: auto;}
+  height: auto;
+}
 
-  .track-item-photo {
+.track-item-photo {
   width: 60px;
   height: 60px;
   background-color: #755384;
   margin-right: 17px;
   filter: drop-shadow(0px 1px 0px #6247d1);
-  border-radius: 10px;}
+  border-radius: 10px;
+}
 
-  .track-item-block {
+.track-item-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;}
+  align-items: flex-start;
+}
 
-  .track-item-title {
+.track-item-title {
   font-family: "Commissioner";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 25px;
   color: #ededed;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
-  .track-item-autor {
+.track-item-autor {
   font-family: "Commissioner";
   font-style: normal;
   font-weight: 400;
@@ -173,60 +189,30 @@ body{
   line-height: 12px;
   color: #ededed;
   margin-top: 7px;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
-  .chart-category-box{
+.chart-category-box {
   padding: 0px 16px 6px;
   isolation: isolate;
-  background: #1C1147;
+  background: #1c1147;
   background-size: auto;
   border-radius: 64px;
-  margin-left: 10px;}
+  margin-left: 10px;
+}
 
-  .chart-category-text{
+.chart-category-text {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  color: #EDEDED;
+  color: #ededed;
   flex: none;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
-
-  .footer-music{
-  position: fixed;
-  height : max-content;
+.HeaderPage {
+  height: max-content;
   width: 100%;
-  bottom : 0;}
-
-
-  .HeaderPage{
-  height : max-content;
-  width: 100%;
-  top : 0;
-  width: max-content}
-
-  @media screen and (max-width: 1080px){
-    .chart-and-authors{
-    gap: 25px;}
-
-    .authors-line{
-    display: block;}
-
-    .authors-icon-text{
-    margin-top: 20px;}
-
-    .authers-box{
-    width: max-content;}
-
-    .authors-icon{
-      height: 150px;
-      width: 150px;}
-
-    .authers-list{
-      width: 100%;
-      gap: 0px;}
-
-    .chart-box{
-    width: max-content;
-    padding: 30px;}
-  }
+  top: 0;
+  width: max-content;
+}

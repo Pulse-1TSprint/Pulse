@@ -47,7 +47,7 @@
 .playlist {
   padding: 36px 36px 0px 36px;
   width: 421px;
-  min-height: 600px;
+  min-height: 800px;
   background: rgba(28, 17, 71, 0.6);
   box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
