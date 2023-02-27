@@ -1,11 +1,10 @@
-.wrapper__player {
-  display: flex;
-  flex-direction: column;
-}
-
 .player {
   background-color: #0f0617;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  opacity: 0.8;
+  filter: drop-shadow(0px 0px 26px #6247d1);
 }
 
 .song__text {
@@ -125,6 +124,7 @@ button:hover {
   font-weight: 700;
   font-size: 16px;
   opacity: 0.5;
+  padding-right: 10px;
 }
 .progress__time {
   margin-top: 2px;
@@ -132,6 +132,7 @@ button:hover {
   font-weight: 700;
   font-size: 14px;
   opacity: 0.7;
+  padding-left: 10px;
 }
 .progress__bar {
   height: 6px;
@@ -158,4 +159,3 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
-
