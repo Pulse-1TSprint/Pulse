@@ -3,7 +3,7 @@
   <div class="user">
     <div class="wrapper">
       <div class="user__info">
-        <img src="../assets/images/photo.png" alt="user_photo" />
+        <img src="../assets/images/photo.png" alt="user_photo" class="user-photo-big"/>
         <div class="user__descr">
           <h3 class="user__name">{{ name }}</h3>
           <router-link to="/load" class="goLoad"
@@ -414,7 +414,7 @@
         </div>
         <img
           :src="require(`../assets/images/covers/${current.img}.png`)"
-          class="img__track_next"
+          class="img__track_clone"
         />
       </div>
       <div v-if="isVisible" class="tegs">

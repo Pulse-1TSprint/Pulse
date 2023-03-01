@@ -4,12 +4,9 @@ body {
 }
 .container-page {
   display: flex;
+  justify-content: space-around;
   margin-top: 40px;
   padding-bottom: 50px;
-}
-.track-cover {
-  margin-left: 200px;
-  margin-right: 260px;
 }
 .track-photo {
   width: 300px;
@@ -43,6 +40,7 @@ body {
   line-height: 44px;
   color: #ededed;
   margin-bottom: 24px;
+  text-align: left;
 }
 .track-item {
   display: flex;
@@ -82,4 +80,24 @@ body {
 .img__track_next {
   width: 64px;
   height: 64px;
+}
+
+.tracks {
+  height: auto;
+}
+
+.home-category-box {
+  width: 120px;
+  height: 35px;
+  background: #1c1147;
+  border-radius: 64px;
+  margin-left: 12px;
+  padding: 5px;
+}
+
+.home-category-text {
+  font-weight: 400;
+  font-size: 20px;
+  color: #ededed;
+  text-align: center;
 }

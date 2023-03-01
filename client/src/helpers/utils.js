@@ -11,6 +11,7 @@
  * @param {array} songs
  * @param {array} Chartsongs
  * @param {array} artists
+ * @param {array} Nextsongs
  */
 
 
