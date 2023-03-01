@@ -27,6 +27,12 @@
             {{ song.title }}
             <br />
             {{ song.artists }}
+            <div class="home-category-box">
+              <p class="home-category-text">{{ song.category }}</p>
+            </div>
+            <div class="home-category-box">
+              <p class="home-category-text">{{ song.category2 }}</p>
+            </div>
           </button>
         </div>
       </div>
@@ -53,7 +59,11 @@
           :src="require(`../assets/images/covers/${current.img}.png`)"
           class="img__track"
         />
-        <button class="like" :class="{ like__active : songs.favorited }" @click="favorite">
+        <button
+          class="like"
+          :class="{ like__active: songs.favorited }"
+          @click="favorite"
+        >
           <svg
             width="20"
             height="19"
@@ -283,25 +293,23 @@
         </div>
         <img
           :src="require(`../assets/images/covers/${current.img}.png`)"
-          class="img__track_next"
+          class="img__track_clone"
         />
       </div>
       <div v-if="isVisible" class="tegs">
-      <div class="tegs__wrapper">
-        <div class="tegs__item">Любимое</div>
-        <div class="tegs__item_2">Популярное</div>
-        <div class="tegs__item_3">Новое</div>
+        <div class="tegs__wrapper">
+          <div class="tegs__item">{{ current.category }}</div>
+          <div class="tegs__item_2">{{ current.category2 }}</div>
+        </div>
       </div>
-    </div>
     </section>
-
-
   </body>
 </template>
 
 <script>
 import HeaderPage from "../components/HeaderPage.vue";
-import songs from "../data/data.tracks";
+import Nextsongs from "../data/data.nextTracks";
+import songs from "../data/data.nextTracks";
 import { shuffleArray } from "../helpers/utils";
 export default {
   components: { HeaderPage },
@@ -315,7 +323,7 @@ export default {
       index: 0,
       isPlaying: false,
       isVisible: false,
-      songs: shuffleArray(songs),
+      songs: shuffleArray(Nextsongs),
       player: new Audio(),
     };
   },
@@ -415,8 +423,7 @@ export default {
       this.isVisible = !this.isVisible;
     },
     favorite() {
-      this.songs[this.index].favorited = !this.songs[
-        this.index].favorited;
+      this.songs[this.index].favorited = !this.songs[this.index].favorited;
     },
     resetPlayer() {
       this.barWidth = 0;

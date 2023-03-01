@@ -307,14 +307,12 @@
         </div>
         <img
           :src="require(`../assets/images/covers/${current.img}.png`)"
-          class="img__track_next"
+          class="img__track_clone"
         />
       </div>
       <div v-if="isVisible" class="tegs">
       <div class="tegs__wrapper">
-        <div class="tegs__item">Любимое</div>
-        <div class="tegs__item_2">Популярное</div>
-        <div class="tegs__item_3">Новое</div>
+        <div class="tegs__item">{{ current.category }}</div>
       </div>
     </div>
     </section>

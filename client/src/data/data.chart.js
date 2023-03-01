@@ -4,7 +4,7 @@ const Chartsongs = [
     title: "Стрелы",
     artists: "Markul, Тося Чайкина",
     src: require("../assets/chart/markul-tosya-chajkina-strely-mp3.mp3"),
-    category: "поп"
+    category: "поп",
   },
   {
     img: "bar",

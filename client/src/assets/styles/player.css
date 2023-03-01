@@ -17,13 +17,15 @@
 
 .img__track {
   margin-right: 36px;
-  width: 54px;
-  height: 54px;
+  width: 45px;
+  height: 45px;
   filter: drop-shadow(0px 4px 4px #6247d1);
   border-radius: 8px;
 }
 
-.img__track_next {
+.img__track_clone {
+  width: 45px;
+  height: 45px;
   margin-left: 9px;
   filter: drop-shadow(0px 4px 4px #6247d1);
   border-radius: 8px;
@@ -35,14 +37,14 @@
 
 .song-title {
   color: #ededed;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
 }
 .song-author {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   color: #ededed;
   text-transform: uppercase;
   text-align: right;
@@ -52,7 +54,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 15px;
+  padding: 0px 15px;
+}
+.play svg {
+  width: 62px;
+  height: 62px;
+}
+
+.pause svg {
+  width: 62px;
+  height: 62px;
 }
 
 button {
@@ -105,15 +116,6 @@ button:hover {
   margin-right: 36px;
 }
 
-.tegs__item_3 {
-  width: 108px;
-  height: 38px;
-  font-size: 22px;
-  background: #1c1147;
-  border-radius: 64px;
-  padding: 6px;
-}
-
 .progress {
   width: 100%;
   user-select: none;
@@ -122,7 +124,7 @@ button:hover {
 .progress__duration {
   color: #a38efb;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   opacity: 0.5;
   padding-right: 10px;
 }
@@ -130,13 +132,13 @@ button:hover {
   margin-top: 2px;
   color: #a38efb;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.7;
   padding-left: 10px;
 }
 .progress__bar {
-  height: 6px;
-  width: 100%;
+  height: 5px;
+  width: 98%;
   cursor: pointer;
   background-color: #1c1147;
   display: inline-block;

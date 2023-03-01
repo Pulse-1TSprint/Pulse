@@ -36,6 +36,10 @@
   line-height: 24px;
 }
 
+.user-photo-big {
+  width: 55%;
+}
+
 .user__social {
   margin: 16px;
 }
@@ -46,7 +50,7 @@
 
 .playlist {
   padding: 36px 36px 0px 36px;
-  width: 421px;
+  width: 350px;
   min-height: 800px;
   background: rgba(28, 17, 71, 0.6);
   box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.25);
@@ -55,7 +59,7 @@
 }
 
 .playlist__title {
-  font-size: 32px;
+  font-size: 26px;
   text-align: left;
   font-weight: 400;
 }
@@ -69,7 +73,7 @@
   background: #1c1147;
   border-radius: 64px;
   border: none;
-  width: 307px;
+  width: 225px;
   height: 37px;
   padding-left: 44px;
   color: #fff;
@@ -89,7 +93,6 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: baseline;
-
 }
 
 .track__item .song {
@@ -106,7 +109,6 @@
   margin-right: 17px;
 }
 
-
 .track__title {
   font-size: 20px;
 }
@@ -119,8 +121,8 @@
 
 .about__user {
   padding: 36px 36px 80px 36px;
-  width: 416px;
-  height: 210px;
+  width: 325px;
+  height: 180px;
   background: rgba(28, 17, 71, 0.6);
   box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
@@ -128,7 +130,7 @@
 }
 
 .about__user_title {
-  font-size: 32px;
+  font-size: 26px;
   text-align: left;
   font-weight: 400;
 }
@@ -139,7 +141,7 @@
 }
 
 .edit__input {
-  width: 348px;
+  width: 225px;
   height: 37px;
   background: #1c1147;
   border-radius: 64px;
