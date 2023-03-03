@@ -101,3 +101,20 @@ body {
   color: #ededed;
   text-align: center;
 }
+
+.like__wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.reactions {
+  display: flex;
+  justify-content: space-around ;
+  width: 120px;
+  padding: 10px;
+  background: #1c1147;
+  border-radius: 15px;
+  margin: 10px auto;
+}

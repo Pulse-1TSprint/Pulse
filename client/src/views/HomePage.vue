@@ -8,9 +8,31 @@
           alt="user-photo"
           class="track-photo"
         />
-        <p class="track-name">{{ current.title }}</p>
+        <div class="like__wrap">
+          <p class="track-name">{{ current.title }}</p>
+          <button class="reaction" @click="showReactions">
+            <img
+              src="../assets/images/icons/like.png"
+              alt="like"
+              class="reaction_like"
+            />
+          </button>
+        </div>
         <p class="track-autor">{{ current.artists }}</p>
+        <div v-if="isShow" class="reactions">
+              <button @click="fire">
+                <img src="../assets/images/icons/fire.svg" alt="fire" />
+              </button>
+              <button @click="heart">
+                <img src="../assets/images/icons/love.svg" alt="heart" />
+              </button>
+              <button @click="angry">
+                <img src="../assets/images/icons/angry.svg" alt="angry" />
+              </button>
+          </div>
       </div>
+
+
       <div class="tracks">
         <h1 class="tracks-title">Следующие треки</h1>
         <div class="track__item">
@@ -61,8 +83,6 @@
         />
         <button
           class="like"
-          :class="{ like__active: songs.favorited }"
-          @click="favorite"
         >
           <svg
             width="20"
@@ -310,7 +330,9 @@
 import HeaderPage from "../components/HeaderPage.vue";
 import Nextsongs from "../data/data.nextTracks";
 import songs from "../data/data.nextTracks";
+import Tracks from '../data/data.tracks';
 import { shuffleArray } from "../helpers/utils";
+
 export default {
   components: { HeaderPage },
   data() {
@@ -320,6 +342,7 @@ export default {
       barWidth: null,
       duration: null,
       currentTime: null,
+      isShow: false,
       index: 0,
       isPlaying: false,
       isVisible: false,
@@ -328,6 +351,51 @@ export default {
     };
   },
   methods: {
+    showReactions() {
+      this.isShow = !this.isShow;
+    },
+    heart() {
+      this.$confetti.start({
+        particles: [
+          {
+            type: "heart",
+            size: 8
+          },
+        ],
+        defaultColors: ["red"],
+      });
+      setTimeout(() => {
+        this.$confetti.stop()
+      }, 2000)
+    },
+    fire() {
+      this.$confetti.start({
+        particles: [
+          {
+            type: "image",
+            url: "https://cdn-icons-png.flaticon.com/128/4325/4325956.png",
+            size: 8
+          },
+        ],
+      });
+      setTimeout(() => {
+        this.$confetti.stop()
+      }, 2000)
+    },
+    angry() {
+      this.$confetti.start({
+        particles: [
+          {
+            type: "image",
+            url: "https://cdn-icons-png.flaticon.com/128/9805/9805014.png",
+            size: 8
+          },
+        ],
+      });
+      setTimeout(() => {
+        this.$confetti.stop()
+      }, 2000)
+    },
     play(song) {
       if (typeof song.src != "undefined") {
         this.current = song;
@@ -422,9 +490,7 @@ export default {
     toggleVisibility() {
       this.isVisible = !this.isVisible;
     },
-    favorite() {
-      this.songs[this.index].favorited = !this.songs[this.index].favorited;
-    },
+
     resetPlayer() {
       this.barWidth = 0;
       this.circleLeft = 0;

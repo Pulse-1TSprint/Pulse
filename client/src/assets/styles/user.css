@@ -14,10 +14,8 @@
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0px;
-  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .user__descr {
@@ -37,7 +35,7 @@
 }
 
 .user-photo-big {
-  width: 55%;
+  width: 75%;
 }
 
 .user__social {
