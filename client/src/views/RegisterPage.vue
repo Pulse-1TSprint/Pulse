@@ -6,7 +6,6 @@
     </div>
     <form class="reg-form" @submit.prevent="register">
       <h3 class="form__title">Регистрация</h3>
-      <input type="text" v-model="register.name" placeholder="Имя" required />
       <input type="email" placeholder="Email" v-model="register_form.email" />
       <input
         :type="show === true ? 'text' : 'password'"

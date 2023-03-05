@@ -40,9 +40,6 @@
     font-size: 14px;
   }
 
-  .user-photo-big {
-  }
-
   .chart-and-authors {
     gap: 25px;
   }
@@ -118,26 +115,26 @@
 
   .show-icon {
     position: absolute;
-    top: 232px;
+    top: 194px;
     left: 275px;
   }
 
   .hide-icon {
     position: absolute;
-    top: 232px;
+    top: 194px;
     left: 275px;
   }
 
   .show-icon_rep {
     position: absolute;
-    top: 295px;
+    top: 270px;
     left: 277px;
   }
 
   .hide-icon_rep {
     position: absolute;
     left: 277px;
-    top: 295px;
+    top: 270px;
   }
 
   .show-icon_log {
@@ -199,6 +196,41 @@
   .chart-period-box {
     display: none;
     width: 125px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 35px;
+  }
+
+  .user-photo-big {
+    width: 70%;
+  }
+
+  .playlist {
+    width: 100%;
+    padding: 30px 15px 0px 15px;
+  }
+
+  .playlists__list {
+    margin-right: 57vh;
+  }
+
+  .playlist__search {
+    width: 100%;
+  }
+
+  .playlists__list_title {
+    font-size: 26px;
+  }
+
+  .search__icon {
+    left: 20px;
+  }
+
+  .about__user {
+   display: none;
   }
   .registration {
     display: flex;
@@ -264,8 +296,8 @@
   }
 
   .img__track_next {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
   .song-title {
     font-size: 16px;
@@ -413,6 +445,40 @@
     font-size: 18px;
     line-height: 20px;
   }
+
+  .playlist__title {
+    font-size: 22px;
+  }
+
+  .playlists__list_title {
+    font-size: 22px;
+  }
+
+  .playlists__item {
+    font-size: 18px;
+    width: 60px;
+  }
+
+  .playlists__item_2 {
+    font-size: 18px;
+    width: 125px;
+    padding: 9px;
+  }
+
+
+  .playlists__item_3 {
+    font-size: 18px;
+    width: 100px;
+    padding: 9px;
+  }
+
+
+  .playlists__list {
+    margin-right: 35vh;
+  }
+
+
+
   .registration__title {
     font-size: 24px;
   }
@@ -447,7 +513,7 @@
     width: 200px;
   }
   .track__item .song {
-    font-size: 12px;
+    font-size: 14px;
   }
   .track-name {
     font-size: 24px;
@@ -459,8 +525,8 @@
     font-size: 24px;
   }
   .img__track_next {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
   .home-category-box {
     width: 66px;
@@ -501,6 +567,14 @@
     margin-left: 20px;
     margin-right: 0px;
   }
+  .playlists__list {
+    margin-right: 25vh;
+  }
+
+
+  .wrapper {
+    padding: 0px 10px;
+  }
   .reg-form {
     width: 100%;
   }
@@ -523,26 +597,26 @@
 
   .show-icon {
     position: absolute;
-    top: 232px;
+    top: 195px;
     left: 250px;
   }
 
   .hide-icon {
     position: absolute;
-    top: 232px;
+    top: 195px;
     left: 250px;
   }
 
   .show-icon_rep {
     position: absolute;
-    top: 295px;
+    top: 272px;
     left: 250px;
   }
 
   .hide-icon_rep {
     position: absolute;
     left: 250px;
-    top: 295px;
+    top: 272px;
   }
 
   .forgot {
