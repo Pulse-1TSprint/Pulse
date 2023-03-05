@@ -28,7 +28,7 @@ const Nextsongs = [
   },
   {
     img: "circles",
-    title: "Cirles",
+    title: "Circles",
     artists: "Post Malone",
     src: require("../assets/tracks/Post Malone - Circles (dizer.net).mp3"),
     category: "поп",

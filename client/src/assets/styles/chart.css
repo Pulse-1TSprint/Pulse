@@ -7,14 +7,14 @@ body {
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  gap: 50px;
+  gap: 40px;
   width: max-content;
   margin: 0 auto;
   padding-top: 80px;
 }
 
 .chart-box {
-  padding: 36px;
+  padding: 26px;
   width: 100%;
   background: rgba(28, 17, 71, 0.6);
   border-radius: 36px;
@@ -105,7 +105,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 10px;
+  margin-top: 10px;
   font-size: 18px;
   white-space: nowrap;
 }
@@ -119,7 +119,7 @@ body {
 }
 
 .authers-box {
-  padding: 36px;
+  padding: 26px;
   gap: 36px;
   background: rgba(28, 17, 71, 0.6);
   border-radius: 36px;
