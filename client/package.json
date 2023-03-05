@@ -12,6 +12,7 @@
     "core-js": "^3.8.3",
     "firebase": "^9.17.1",
     "vue": "^3.2.13",
+    "vue-confetti": "^2.3.0",
     "vue-router": "^4.1.6",
     "vuex": "^4.1.0"
   },

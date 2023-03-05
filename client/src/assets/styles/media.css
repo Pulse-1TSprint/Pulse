@@ -49,6 +49,7 @@
 
   .authors-line {
     display: block;
+    width: 100%;
   }
 
   .authors-icon-text {
@@ -57,6 +58,7 @@
 
   .authers-box {
     width: max-content;
+    padding: 26px;
   }
 
   .authors-icon {
@@ -67,11 +69,17 @@
   .authers-list {
     width: 100%;
     gap: 0px;
+    margin-top: 30px;
   }
 
   .chart-box {
     width: max-content;
-    padding: 30px;
+    padding: 26px;
+  }
+
+  .chart-track-list{
+    margin-top: 40px;
+    min-height: auto;
   }
 
   .registration {
@@ -178,12 +186,10 @@
     padding-top: 19px;
   }
   .chart-box {
-    background: none;
+    width: 100%;
   }
 
   .chart-and-authors {
-    display: flex;
-    flex-direction: column;
     padding: 0px;
     width: max-content;
     margin: 0 auto;
@@ -192,6 +198,7 @@
 
   .chart-period-box {
     display: none;
+    width: 125px;
   }
   .registration {
     display: flex;
@@ -316,7 +323,7 @@
   .chart-box {
     width: 100%;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 30px 0px;
   }
 
   .chart-period-line {
@@ -324,8 +331,11 @@
     margin-top: 20px;
   }
 
+  .chart-h2{
+    text-align: center;
+  }
   .chart-track-list {
-    margin-top: 135px;
+    margin-top: 35px;
   }
 
   .chart-period-box-text {
@@ -347,8 +357,7 @@
   .authers-box {
     width: 100%;
     margin-top: 20px;
-    display: flex;
-    align-items: flex-start;
+    display: block;
   }
 
   .authors-line {
@@ -357,13 +366,21 @@
   }
 
   .authors-icon {
-    height: 160px;
-    width: 160px;
+    height: 144px;
+    width: 144px;
   }
 
   .authers-list {
     gap: 10px;
     align-items: center;
+  }
+
+  .authors-h2{
+  text-align: center;
+  }
+
+  .authors-text{
+    width: 144px;
   }
 
   .authors-period-line {
@@ -530,5 +547,19 @@
 
   .forgot {
     width: 100%;
+  }
+
+  .chart-and-authors{
+  padding-top: 10px;
+  }
+
+  .authors-icon{
+  width: 116px;
+  height: 116px;
+  }
+
+  .authors-text{
+  width: 116px;
+  font-size: 14px;
   }
 }

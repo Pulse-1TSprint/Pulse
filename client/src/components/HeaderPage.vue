@@ -29,7 +29,7 @@
     </div>
     <div class="profile">
       <div class="user-data">
-        <p class="user-name">Сычев Юрий</p>
+        <p class="user-name">Ваш аккаунт</p>
         <p class="user-id">id 845789478</p>
       </div>
       <a href="/user"

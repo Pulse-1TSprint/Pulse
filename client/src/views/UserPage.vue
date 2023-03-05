@@ -119,6 +119,7 @@
               :key="song.src"
               @click="play(song)"
               :class="song.src == current.src ? 'song playing' : 'song'"
+
             >
               <img
                 :src="require(`../assets/images/covers/${song.img}.png`)"
@@ -184,7 +185,7 @@
           :src="require(`../assets/images/covers/${current.img}.png`)"
           class="img__track"
         />
-        <button class="like">
+        <button class="like" @click="favorite">
           <svg
             width="20"
             height="19"
@@ -419,9 +420,6 @@
       </div>
       <div v-if="isVisible" class="tegs">
       <div class="tegs__wrapper">
-        <div class="tegs__item">Любимое</div>
-        <div class="tegs__item_2">Популярное</div>
-        <div class="tegs__item_3">Новое</div>
       </div>
     </div>
     </section>
@@ -435,6 +433,7 @@ import { ref, onBeforeMount } from "vue";
 import { useStore } from "vuex";
 import { auth } from "../firebase";
 import HeaderPage from "../components/HeaderPage.vue";
+import Nextsongs from "../data/data.nextTracks";
 import songs from "../data/data.tracks";
 import { shuffleArray } from "../helpers/utils";
 export default {
@@ -464,11 +463,16 @@ export default {
       index: 0,
       isPlaying: false,
       isVisible: false,
+      Nextsongs: shuffleArray(Nextsongs),
       songs: shuffleArray(songs),
       player: new Audio(),
     };
   },
+
   methods: {
+    favorite() {
+      this.songs.push({ img: this.current.img, title: this.current.title, artists: this.current.artists, src: this.current.src });
+    },
     play(song) {
       if (typeof song.src != "undefined") {
         this.current = song;
@@ -481,11 +485,11 @@ export default {
         "ended",
         function () {
           this.index++;
-          if (this.index > this.songs.length - 1) {
+          if (this.index > this.Nextsongs.length - 1) {
             this.index = 0;
           }
 
-          this.current = this.songs[this.index];
+          this.current = this.Nextsongs[this.index];
 
           this.play(this.current);
         }.bind(this)
@@ -499,20 +503,20 @@ export default {
     prev() {
       this.index--;
       if (this.index < 0) {
-        this.index = this.songs.length - 1;
+        this.index = this.Nextsongs.length - 1;
       }
 
-      this.current = this.songs[this.index];
+      this.current = this.Nextsongs[this.index];
 
       this.play(this.current);
     },
     next() {
       this.index++;
-      if (this.index > this.songs.length - 1) {
+      if (this.index > this.Nextsongs.length - 1) {
         this.index = 0;
       }
 
-      this.current = this.songs[this.index];
+      this.current = this.Nextsongs[this.index];
 
       this.play(this.current);
     },
@@ -579,7 +583,7 @@ export default {
     },
   },
   created() {
-    this.current = this.songs[this.index];
+    this.current = this.Nextsongs[this.index];
     this.player.src = this.current.src;
 
     let vm = this;
