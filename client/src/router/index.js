@@ -25,9 +25,6 @@ const routes = [
     path: '/load',
     name: 'Load',
     component: () => import('../views/LoadPage.vue'),
-    //meta: {
-      //requiresAuth: true
-    //}
   },
 
   {

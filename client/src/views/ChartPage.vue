@@ -3,15 +3,7 @@
     <HeaderPage></HeaderPage>
     <div class="chart-and-authors">
       <div class="chart-box">
-        <div class="chart-period-line">
           <h2 class="chart-h2">Чарт</h2>
-          <div class="chart-period-box">
-            <h2 class="chart-period-text">За месяц</h2>
-          </div>
-          <div class="chart-period-box">
-            <h2 class="chart-period-text">За неделю</h2>
-          </div>
-        </div>
         <div class="chart-track-list">
           <div class="track__item">
             <button

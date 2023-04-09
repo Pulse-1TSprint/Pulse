@@ -161,3 +161,16 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
+
+.volume {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.volume-range {
+  margin-left: 10px;
+  height: 3px;
+  width: 90px;
+}
+
