@@ -58,6 +58,12 @@ form input {
   padding: 0px;
 }
 
+.goHome {
+  color: #ededed;
+  text-decoration: none;
+  filter: drop-shadow(0px 4px 43px #6247D1);
+}
+
 .policy {
   display: flex;
   justify-content: center;
@@ -85,32 +91,32 @@ form input {
 
 .show-icon {
   position: absolute;
-  top: 268px;
-  left: 350px;
+  top: 227px;
+  left: 340px;
   z-index: 11;
   cursor: pointer;
 }
 
 .hide-icon {
   position: absolute;
-  left: 350px;
-  top: 268px;
+  left: 340px;
+  top: 227px;
   z-index: 11;
   cursor: pointer;
 }
 
 .show-icon_rep {
   position: absolute;
-  top: 345px;
-  left: 350px;
+  top: 306px;
+  left: 340px;
   z-index: 11;
   cursor: pointer;
 }
 
 .hide-icon_rep {
   position: absolute;
-  left: 350px;
-  top: 345px;
+  left: 340px;
+  top: 306px;
   z-index: 11;
   cursor: pointer;
 }

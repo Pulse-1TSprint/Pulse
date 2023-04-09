@@ -20,6 +20,25 @@
 
         <input type="text" class="search__header" placeholder="Поиск" />
       </div>
+      <div id="sidemenu">
+    <button class="sidemenu__btn" v-on:click="navOpen=!navOpen" v-bind:class="{active:navOpen}">
+				<span class="top"></span>
+				<span class="mid"></span>
+				<span class="bottom"></span>
+			</button>
+    <transition name="translateX">
+      <nav v-show="navOpen">
+        <div class="sidemenu__wrapper">
+          <ul class="sidemenu__list">
+            <li class="sidemenu__item"><router-link to="/chart">Чарт</router-link></li>
+            <li class="sidemenu__item"><router-link to="/load">Загрузить</router-link></li>
+            <li class="sidemenu__item"><router-link to="/login">Войти</router-link></li>
+            <li class="sidemenu__item"><router-link to="/register">Регистрация</router-link></li>
+          </ul>
+        </div>
+      </nav>
+    </transition>
+  </div>
       <div class="chart">
         <a href="/chart" class="chart-link">Чарт</a>
       </div>
@@ -27,18 +46,9 @@
         <a href="/load" class="load-link">Загрузить</a>
       </div>
     </div>
-    <div class="profile">
-      <div class="user-data">
-        <p class="user-name">Ваш аккаунт</p>
-        <p class="user-id">id 845789478</p>
-      </div>
-      <a href="/user"
-        ><img
-          src="../assets/images/UserPhoto.png"
-          alt="user-photo"
-          class="user-photo"
-        />
-      </a>
+    <div class="authoization">
+      <button class="auth-header"><router-link to="/login">Войти</router-link></button>
+      <button class="auth-header"><router-link to="/register">Регистрация</router-link></button>
     </div>
   </div>
 </template>
@@ -120,73 +130,159 @@
   line-height: 29px;
   color: #ededed;
 }
-.profile {
+.authoization {
   display: flex;
   align-items: center;
   margin-left: 78px;
 }
-.user-name {
-  width: 97px;
-  height: 20px;
-  left: 1699px;
-  top: 44px;
-  font-family: "Commissioner";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: right;
-  color: #ededed;
-}
-.user-id {
-  width: 63px;
-  height: 12px;
-  left: 1733px;
-  top: 63px;
-  font-family: "Commissioner";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 12px;
-  color: #676767;
-}
-.user-photo {
-  width: 48px;
-  height: 48px;
-  background: #755384;
-  border: 2px solid #1c1147;
-  border-radius: 50%;
-}
-.user-data {
-  margin-right: 30px;
+
+.auth-header {
+  margin-left: 20px;
+  width: 120px;
+  height: 33px;
+  background: #1c1147;
+  border-radius: 35px;
+  border: none;
 }
 
+.auth-header a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+#sidemenu nav {
+  display: none;
+  width: 100%;
+  background: #110f10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+#sidemenu .sidemenu__btn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  position: relative;
+  z-index: 100;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+#sidemenu .sidemenu__btn span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: auto;
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.4s ease;
+}
+#sidemenu .sidemenu__btn span.top {
+  transform: translateY(-8px);
+}
+#sidemenu .sidemenu__btn span.bottom {
+  transform: translateY(8px);
+}
+#sidemenu .sidemenu__btn.active .top {
+  transform: rotate(-45deg);
+}
+#sidemenu .sidemenu__btn.active .mid {
+  transform: translateX(-20px) rotate(360deg);
+  opacity: 0;
+}
+#sidemenu .sidemenu__btn.active .bottom {
+  transform: rotate(45deg);
+}
+#sidemenu .sidemenu__wrapper {
+  padding-top: 50px;
+}
+#sidemenu .sidemenu__list {
+  padding-top: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#sidemenu .sidemenu__item a {
+  text-decoration: none;
+  line-height: 1.6em;
+  font-size: 1.6em;
+  padding: 0.5em;
+  display: block;
+  color: white;
+  transition: 0.4s ease;
+}
+#sidemenu .sidemenu__item a:hover {
+  background: lightgrey;
+  color: dimgrey;
+}
+
+.translateX-enter {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.translateX-enter-active,
+.translateX-leave-active {
+  transform-origin: top left 0;
+  transition: 0.2s ease;
+}
+
+.translateX-leave-to {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+
+
 @media (max-width: 1024px) {
-  .profile {
-    margin-left: 36px;
+  .authoization{
+    margin-left: 26px;
   }
   .load {
-    width: 124px;
+    width: 100px;
     margin-left: 24px;
   }
   .load-link {
-    font-size: 18px;
+    font-size: 16px;
   }
   .logo-pulse {
     font-size: 36px;
   }
-  .user-data {
-    margin-right: 20px;
+  .auth-header {
+    width: 100px;
+  }
+
+  .auth-header a {
+    font-size: 14px;
   }
   .chart-link {
     margin-left: 24px;
   }
 
   @media (max-width: 768px) {
-    .load {
+    #sidemenu .sidemenu__btn {
+      display: block;
+    }
+    .auth-header {
       display: none;
     }
-    .user-data {
+    .chart-link {
+      display: none;
+    }
+    #sidemenu nav {
+      display: block;
+    }
+    .load {
       display: none;
     }
   }
@@ -195,7 +291,7 @@
     .container {
       padding: 20px 15px 20px 15px;
     }
-    .profile {
+    .authoization{
       margin-left: 15px;
     }
     .chart-link {
@@ -221,5 +317,14 @@
 </style>
 
 <script>
-export default {};
+export default {
+	el: '#sidemenu',
+	data() {
+    return {
+      navOpen: true,
+    }
+	},
+};
+
+
 </script>
