@@ -1,17 +1,14 @@
 <template>
   <router-view/>
-   <button @click="click"></button>
+
 </template>
 
 <script>
+import MusicPlayer from './components/MusicPlayer.vue'
 
 export default {
   components: {},
   name: 'App',
-  methods: {
-    click() {
-    }
-  }
 }
 </script>
 

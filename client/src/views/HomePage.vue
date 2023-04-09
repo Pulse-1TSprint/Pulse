@@ -20,17 +20,18 @@
         </div>
         <p class="track-autor">{{ current.artists }}</p>
         <div v-if="isShow" class="reactions">
-          <button @click="fire">
-            <img src="../assets/images/icons/fire.svg" alt="fire" />
-          </button>
-          <button @click="heart">
-            <img src="../assets/images/icons/love.svg" alt="heart" />
-          </button>
-          <button @click="angry">
-            <img src="../assets/images/icons/angry.svg" alt="angry" />
-          </button>
-        </div>
+              <button @click="fire">
+                <img src="../assets/images/icons/fire.svg" alt="fire" />
+              </button>
+              <button @click="heart">
+                <img src="../assets/images/icons/love.svg" alt="heart" />
+              </button>
+              <button @click="angry">
+                <img src="../assets/images/icons/angry.svg" alt="angry" />
+              </button>
+          </div>
       </div>
+
 
       <div class="tracks">
         <h1 class="tracks-title">Следующие треки</h1>
@@ -70,15 +71,6 @@
       </div>
       <div v-cloak></div>
       <div class="player__bottom">
-        <div class="volume">
-          <img src="../assets/images/icons/player/Vector.svg">
-          <input
-            type="range"
-            value="0" min="0" max="100"
-            class="volume-range"
-            ref="volume_range"
-          />
-        </div>
         <div class="song__text">
           <h2 class="song-title">
             {{ current.title }}
@@ -89,7 +81,9 @@
           :src="require(`../assets/images/covers/${current.img}.png`)"
           class="img__track"
         />
-        <button class="like">
+        <button
+          class="like"
+        >
           <svg
             width="20"
             height="19"
@@ -336,7 +330,7 @@
 import HeaderPage from "../components/HeaderPage.vue";
 import Nextsongs from "../data/data.nextTracks";
 import songs from "../data/data.nextTracks";
-import Tracks from "../data/data.tracks";
+import Tracks from '../data/data.tracks';
 import { shuffleArray } from "../helpers/utils";
 
 export default {
@@ -356,31 +350,7 @@ export default {
       player: new Audio(),
     };
   },
-
-  mounted() {
-    this.addEventListener();
-  },
   methods: {
-    addEventListener() {
-      this.$refs.volume_range.addEventListener(
-        "input",
-        this.handleVolumeProgress
-      );
-    },
-
-    handleVolumeProgress(event) {
-      let value = event.target.value;
-      this.player.volume = value / 100;
-      this.setLocalStorageData("volume", value);
-    },
-
-    setVolumeFromLocalStorage() {
-      let volume = parseFloat(this.getLocalStorageData("volume")) || 100;
-      let input = this.$refs.volume_range;
-      this.player.volume = volume / 100;
-      input.value = volume;
-    },
-
     showReactions() {
       this.isShow = !this.isShow;
     },
@@ -389,14 +359,14 @@ export default {
         particles: [
           {
             type: "heart",
-            size: 8,
+            size: 8
           },
         ],
         defaultColors: ["red"],
       });
       setTimeout(() => {
-        this.$confetti.stop();
-      }, 2000);
+        this.$confetti.stop()
+      }, 2000)
     },
     fire() {
       this.$confetti.start({
@@ -404,13 +374,13 @@ export default {
           {
             type: "image",
             url: "https://cdn-icons-png.flaticon.com/128/4325/4325956.png",
-            size: 8,
+            size: 8
           },
         ],
       });
       setTimeout(() => {
-        this.$confetti.stop();
-      }, 2000);
+        this.$confetti.stop()
+      }, 2000)
     },
     angry() {
       this.$confetti.start({
@@ -418,13 +388,13 @@ export default {
           {
             type: "image",
             url: "https://cdn-icons-png.flaticon.com/128/9805/9805014.png",
-            size: 8,
+            size: 8
           },
         ],
       });
       setTimeout(() => {
-        this.$confetti.stop();
-      }, 2000);
+        this.$confetti.stop()
+      }, 2000)
     },
     play(song) {
       if (typeof song.src != "undefined") {

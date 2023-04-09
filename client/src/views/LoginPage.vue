@@ -1,7 +1,7 @@
 <template>
   <section class="logIn">
     <div class="logIn__text">
-      <h2 class="logIn__title"><router-link class="goHome" to="/">Добро пожаловать на Pulse</router-link></h2>
+      <h2 class="logIn__title">Добро пожаловать на Pulse</h2>
       <p class="logIn__desc">Музыка всегда с тобой</p>
     </div>
     <form class="login" @submit.prevent="login">

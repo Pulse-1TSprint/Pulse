@@ -28,6 +28,33 @@ body {
   color: #ededed;
 }
 
+.chart-period-line {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  width: auto;
+  height: 40px;
+}
+
+.chart-period-box-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 36px;
+}
+
+.chart-period-box {
+  display: flex;
+  justify-content: center;
+  padding: 5px 36px 5px;
+  width: 140px;
+  height: 35px;
+  background: #1c1147;
+  border-radius: 64px;
+  margin-top: 10px;
+}
+
 .chart-period-text {
   font-style: normal;
   font-weight: 400;

@@ -20,8 +20,6 @@ const app = express()
 app.use(express.json())
 app.use(cors({ origin: 'http://localhost:8080' }))
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
-
 app.get('/api/track/:id', async (req, res) => {
     const id = req.params.id
     console.log(id);
